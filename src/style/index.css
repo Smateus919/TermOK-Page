@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-principal{
+    background-color: blue;
+    width: 100%;
+    height: 40px;
+}
+.main-container{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+.slider-container{
+    width: 100%;
+    display: flex;
+}
+.slider-items{
+    color: #ffffff;
+    background-image: url('../utils/imagenes/slider1-laptop.png');
+    background-repeat: no-repeat;
+    background-position-y:-20px;
+    background-position-x:center;
+
+    width: 100%;
+    height: 500px;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+}
+.slider-items:nth-child(1){
+    justify-content: flex-end;
+}
+.slider-items:nth-child(2){
+    color: #ffffff;
+    background-image: url('../utils/imagenes/slider2-laptop.png');
+    background-repeat: no-repeat;
+    background-position-x:center;
+}
+.slider-items:nth-child(3){
+    color: #ffffff;
+    background-image: url('../utils/imagenes/slider3-laptop.png');
+    background-repeat: no-repeat;
+    background-position-x:center;
+}
+.slider-items:nth-child(4){
+    color: #ffffff;
+    background-image: url('../utils/imagenes/slider4-laptop.png');
+    background-repeat: no-repeat;
+    background-position-x:center;
+}
