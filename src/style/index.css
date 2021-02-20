@@ -54,9 +54,28 @@
     background-repeat: no-repeat;
     background-position-x:center;
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:768px){
     .slider-items:nth-child(1){
-        background-image: url('../utils/imagenes/slider1-tablet.png');
-        background-position-x: -140px;
+        background-image: url('../utils/imagenes/slider1-tablet.png');        
+    }
+    .slider-items:nth-child(2){
+        background-image: url('../utils/imagenes/slider2-tablet.png');        
+    }
+    .slider-items:nth-child(3){
+        background-image: url('../utils/imagenes/slider3-tablet.png');        
+    }
+}
+@media screen and (max-width:425px){
+    .slider-items:nth-child(1){
+        background-image: url('../utils/imagenes/slider1-movil.png');
+        background-position-y: -40px;        
+    }
+    .slider-items:nth-child(2){
+        background-image: url('../utils/imagenes/slider2-movil.png');
+        background-position-y: -60px; 
+    }
+    .slider-items:nth-child(3){
+        background-image: url('../utils/imagenes/slider3-movil.png');
+        background-position-y: -60px; 
     }
 }
