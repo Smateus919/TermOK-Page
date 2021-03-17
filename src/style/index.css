@@ -56,22 +56,21 @@ header{
 }
 .slider-items:nth-child(2){
     color: #ffffff;
-    background-image: url('../utils/imagenes/slider2-movil.png');
+    background-image: url('../utils/imagenes/slider2-movilD.png');
     background-repeat: no-repeat;
-    background-position-x:center;
     background-position-y: -70px; 
 
 }
-#imgPaySlider{
-    width: 240px;
-    margin-bottom: 10px;
-}
 .slider-items:nth-child(3){
     color: #ffffff;
-    background-image: url('../utils/imagenes/slider3-movil.png');
+    background-image: url('../utils/imagenes/slider3-movilD.png');
     background-repeat: no-repeat;
     background-position-x:-65px;
     background-position-y: -70px; 
+}
+.slider-items:nth-child(3) img{
+    width: 380px;
+    padding-bottom: 23px;
 }
 .slider-items:nth-child(4){
     color: #ffffff;
@@ -102,6 +101,17 @@ header{
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
+#imgPaySlider{
+    width: 220px;
+    margin-bottom: 10px;
+}
+.info-slider__text:nth-child(2) img{
+    width: 360px;
+}
+.slider-items:nth-child(3) h2{
+    font-size: 3.3rem;
+}
+
 .btnConocermas{
     padding: 3px 7px;
     margin: 5px;
