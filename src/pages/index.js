@@ -12,10 +12,8 @@ let btnPrevSlider = document.querySelector('.left-arrow')
 btnPrevSlider.addEventListener('click', prevSlider)
 
 setInterval(nextSlider, 5000)
-console.log(contador)
 
 function nextSlider(){
-    console.log(contador)
     slider.style.transform = "translate("+(-width*contador)+"px)"
     slider.style.transition = "transform .8s"
     contador++
@@ -24,16 +22,13 @@ function nextSlider(){
         slider.style.transition = "transform .3s"
         contador=1
     }    
-    console.log(contador)
 }
 
 function prevSlider(){
-    console.log(contador)
     if(contador==1){
         slider.style.transform = "translate("+(-width*(sliderIndividual.length-1))+"px)"
         slider.style.transition = "transform .8s"
         contador=sliderIndividual.length  
-        console.log(contador)
     }else{
         contador=contador-2
         slider.style.transform = "translate("+(-width*contador)+"px)"
