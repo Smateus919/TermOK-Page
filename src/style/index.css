@@ -189,9 +189,16 @@ header{
 
     background-color: #f8f2f2;
 }
+.articles h2{
+    margin-bottom: 40px;
+
+    text-align: center;
+    font-size: 2.4rem;
+    text-shadow: -2px 2px 2px #b2aeae;
+}
 article{
     width: 97.66vw;
-    height: 170px;
+    min-height: 170px;
     margin: 10px 5px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -208,8 +215,8 @@ article{
 
     text-align: center;
 }
-.articles-info h2{
-    font-size: 2.3rem;
+.articles-info h3{
+    font-size: 2.1rem;
     text-shadow: -2px 2px 2px #b2aeae;
 }
 .articles-info p{
@@ -234,9 +241,11 @@ article{
     font-size: 1.5rem;
     transition: 1s;
 }
-article:nth-child(1) img{
+article img{
     width: 150px;
 }
+/* -------------------- OPTION PAY ----------------------------*/
+
 
 @media screen and (min-width:430px){
     .slider-items:nth-child(1){
