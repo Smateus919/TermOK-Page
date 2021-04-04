@@ -230,14 +230,13 @@ article{
     border: solid #fa2360 1px;
     border-radius: 15px;   
     
+    background-color: #fa2360;
     font-size: 1.2rem;
-    color: #fa2360;
+    color: #fff;
     text-decoration: none;
     transition: 1s;
 }
 .articles-info .verMas:hover{
-    color: #fff;
-    background-color: #fa2360;
     font-size: 1.5rem;
     transition: 1s;
 }
@@ -245,6 +244,56 @@ article img{
     width: 150px;
 }
 /* -------------------- OPTION PAY ----------------------------*/
+
+.OptionPay{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+
+    background-image: url('../utils/imagenes/payZone.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.OptionPay img{
+    height: 200px;
+    position: absolute;
+    left: -30px;
+}
+.info-optionPay{
+    width: 50%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-optionPay h2{
+    text-align: center;
+    font-size: 2.3rem;
+
+    text-shadow: -2px 2px 2px #d6ced0;
+}
+.info-optionPay a{
+    margin-top: 15px;
+    padding: 3px 7px;
+
+    font-size: 1.5rem;
+    color: #fff;
+    border: solid 1px #f7cd26;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #f6be0c;
+    text-shadow: -2px 2px 2px #1d1d1d;
+}
+
+
+
+
 
 
 @media screen and (min-width:430px){
