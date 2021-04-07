@@ -4,11 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TermOK-Amor por tu cuerpo</title>
-        <link rel="stylesheet" href="../src/style/index.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../src/style/index.css">
+        <link rel="stylesheet" href="../src/style/tablet.css"  media="screen and (min-width:430px)">
+        
     </head>
     <body>
         <header>
@@ -57,9 +59,9 @@
                             <div class="info-slider__text">
                                 <h2>Siguenos en nuestras redes sociales</h2>
                                 <div class="info-slider__redes-sociales">
-                                    <a href="https://www.fb.com/TermOk-302000443805723"><img id="logo-facebook-slider" src="../src/utils/icons/f_logo_RGB-Blue_58.png" alt="link a facebook de termok"></a>
-                                    <a href="https://www.instagram.com/termokcol/"><img id="logo-instagram-slider" src="../src/utils/icons/Instagram_Glyph_Gradient_RGB.png" alt="link a instagram de termok"></a>
-                                    <a href="#"><img id="logo-whatsapp-slider" src="../src/utils/icons/WhatsApp_Logo_1.png" alt="link a whatsapp de termok"></a>
+                                    <a href="https://www.fb.com/TermOk-302000443805723"><img id="logo-redes" src="../src/utils/icons/f_logo_RGB-Blue_58.png" alt="link a facebook de termok"></a>
+                                    <a href="https://www.instagram.com/termokcol/"><img id="logo-redes" src="../src/utils/icons/Instagram_Glyph_Gradient_RGB.png" alt="link a instagram de termok"></a>
+                                    <a href="#"><img id="logo-redes" src="../src/utils/icons/WhatsApp_Logo_1.png" alt="link a whatsapp de termok"></a>
                                 </div>
                             </div>
                         </div>
@@ -72,38 +74,70 @@
         </main>
         <section class="articles">
             <h2>Conoce como perder peso con la siguiente informacion: </h2>
-            <article>
-                <img src="../src/utils/imagenes/ficha1.png" alt="">
-                <div class="articles-info">
-                    <h3>Batidos para bajar de peso</h3>
-                    <p>Las investigaciones sugieren que la manera más segura de perder peso y no volver a aumentarlo es siguiendo una dieta saludable con menos calorías de...</p>
-                    <a class="verMas" href="#">ver más</a>
-                </div>
-            </article>
-            <article>
-                <img src="../src/utils/imagenes/ficha2.png  " alt="">
-                <div class="articles-info">
-                    <h3>Licuados verdes para quemar grasa</h3>
-                    <p>Los jugos verdes se han puesto de moda gracias a que en una sola bebida se combinan las propiedades de verduras y frutas que...</p>
-                    <a class="verMas" href="#">ver más</a>
-                </div>
-            </article>
-            <article>
-                <img src="../src/utils/imagenes/ficha3.png" alt="">
-                <div class="articles-info">
-                    <h2>Batidos rojos para perder peso naturalmente</h2>
-                    <p></p>
-                    <a class="verMas" href="#">ver más</a>
-                </div>
-            </article>
+            <section class="articles-items">                
+                <article>
+                    <picture>
+                        <source media="(min-width: 430px)" srcset="../src/utils/imagenes/ficha1-tablet.png">
+                            <img src="../src/utils/imagenes/ficha1.png" alt=""> 
+                    </picture>
+                    <div class="articles-info">
+                        <h3>Batidos para bajar de peso</h3>
+                        <p>Las investigaciones sugieren que la manera más segura de perder peso y no volver a aumentarlo es siguiendo una dieta saludable con menos calorías de...</p>
+                        <a class="verMas" href="#">ver más</a>
+                    </div>
+                </article>
+                <article>
+                    <picture>
+                        <source media="(min-width: 430px)" srcset="../src/utils/imagenes/ficha2-tablet.png">
+                            <img src="../src/utils/imagenes/ficha2.png  " alt="">
+                    </picture>
+                    <div class="articles-info">
+                        <h3>Licuados verdes para quemar grasa</h3>
+                        <p>Los jugos verdes se han puesto de moda gracias a que en una sola bebida se combinan las propiedades de verduras y frutas que...</p>
+                        <a class="verMas" href="#">ver más</a>
+                    </div>
+                </article>
+                <article>
+                    <picture>
+                        <source media="(min-width: 430px)" srcset="../src/utils/imagenes/ficha3.-tablet.png">
+                            <img src="../src/utils/imagenes/ficha3.png" alt="">
+                    </picture>
+                    <div class="articles-info">
+                        <h3>Batidos rojos para perder peso naturalmente</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cumque, repellat 
+                            ...</p>
+                        <a class="verMas" href="#">ver más</a>
+                    </div>
+                </article>
+            </section>
         </section>
         <section class="OptionPay">
-            <img src="../src/utils/imagenes/hombre-mujer-faja.png" alt="">
+            <img src="../src/utils/imagenes/hombre-mujer-faja.png" alt="modelos mujer y hombre con faja">
             <div class="info-optionPay">
-                <h2>Lleva tu faja termoredutora por solo <br>$39,000</h2>
+                <h2>Compra faja termoredutora por solo <br>$39,000!!</h2>
                 <a href="#">Comprar</a>
             </div>
         </section>
+        <section class="CharacteristicsBrand">
+            <article class="CharacteristicsBrand-items">
+                <img src="../src/utils/icons/seguridad2.png" alt="icono de seguridad">
+                <h3>Seguridad</h3>
+                <p>Garantizamos la seguridad de tus comprar ofreciendote diferentes medios de pago y contando con el respaldo de <a href="">ePayco</a></p>
+            </article>
+            <article class="CharacteristicsBrand-items">
+                <img src="../src/utils/icons/calidad.png" alt="">
+                <h3>Calidad</h3>
+                <p>Entregamos productos de primera calidad, con material de gran grosor y acabados reforzados</p>
+            </article>
+            <article class="CharacteristicsBrand-items">
+                <img src="../src/utils/icons/Saludable.png" alt="">
+                <h3>Bienestar</h3>
+                <p>Nuestra prioridad es poder dar bienestar para ti, ofreciendo la mejor información para el cuidado de tu cuerpo y mente</p>
+            </article>
+        </section>
+        <footer>
+            <p>Copyright © 2021 | TermOK</p>
+        </footer>
         <script type="text/javascript" src="../src/pages/index.js"></script>
     </body>
 </html>
