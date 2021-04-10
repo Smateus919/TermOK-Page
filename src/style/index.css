@@ -175,6 +175,7 @@ header{
 .articles{
     width: 100%;
     padding-top: 40px;
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -186,7 +187,7 @@ header{
     flex-direction: column;
 }
 .articles h2{
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     text-align: center;
     font-size: 2.4rem;
@@ -236,7 +237,7 @@ header{
     font-size: 1.5rem;
     transition: 1s;
 }
-article img{
+.articles article img{
     width: 150px;
     height: 100%;
 }
@@ -245,7 +246,6 @@ article img{
 .OptionPay{
     width: 100%;
     height: 250px;
-    margin-top: 10px;
 
     background-image: url('../utils/imagenes/payZone.png');
     background-repeat: no-repeat;
@@ -317,9 +317,9 @@ article img{
     margin-top: 40px;
     margin-bottom: 18px;
 }
-.CharacteristicsBrand-items:nth-child(2) img{
-    width: 95px;
-} 
+.CharacteristicsBrand-items__info{
+    text-align: center;
+}
 .CharacteristicsBrand-items h3{
     font-size: 2.2rem;
     color: #fff;
