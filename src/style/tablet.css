@@ -2,16 +2,15 @@
 .slider-container, .slider-items{
     height: 450px;
 }
-
-.info-slider__text{
-    width: 60%;
-    margin-bottom: 40px;
-}
 .info-slider{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: start;
+}
+.info-slider__text{
+    width: 60%;
+    margin-bottom: 40px;
 }
 .slider-items:nth-child(1){
     background-image: url('../utils/imagenes/slider1-tablet.png');

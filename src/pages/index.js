@@ -11,8 +11,8 @@ btnNextSlider.addEventListener('click', nextSlider)
 let btnPrevSlider = document.querySelector('.left-arrow')
 btnPrevSlider.addEventListener('click', prevSlider)
 
-// setInterval(nextSlider, 5000)
-
+setInterval(nextSlider, 5000)
+console.log(width)
 function nextSlider(){
     slider.style.transform = "translate("+(-width*contador)+"px)"
     slider.style.transition = "transform .8s"

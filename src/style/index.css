@@ -85,19 +85,20 @@ header{
 }
 .btnConocermas{
     padding: 3px 7px;
+    margin-top: 0;
     margin: 5px;
-    border: solid 1px #f7cd26;
+    border: solid 1px #fff;
     border-radius: 5px;
     text-decoration: none;
     background-color: #f6be0c;
     color: #fff;
     font-size: 2rem;
     text-shadow: -2px 2px 2px #1d1d1d;
-    transition: 1s;  
+    transition: .7s; 
 }
 .btnConocermas:hover{
     font-size: 2.5rem;
-    transition: 1s;
+    transition: .7s;
 }
 .slider-items:nth-child(2){
     background-image: url('../utils/imagenes/slider2-movilD.png');
@@ -281,7 +282,7 @@ header{
 
     font-size: 1.5rem;
     color: #fff;
-    border: solid 1px #f7cd26;
+    border: solid 1px #fff;
     border-radius: 5px;
     text-decoration: none;
     background-color: #f6be0c;
@@ -351,18 +352,3 @@ footer{
     }
 }
 
-
-@media screen and (min-width:770px){
-    .slider-items:nth-child(1){
-        background-image: url('../utils/imagenes/slider1-laptop.png');
-    }
-    .slider-items:nth-child(2){
-        background-image: url('../utils/imagenes/slider2-laptop.png');
-    }
-    .slider-items:nth-child(3){
-        background-image: url('../utils/imagenes/slider3-laptop.png');
-    }
-    .slider-items:nth-child(4){
-        background-image: url('../utils/imagenes/slider4-laptop.png');
-    }
-}
