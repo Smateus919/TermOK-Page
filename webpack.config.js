@@ -1,50 +1,34 @@
-const Path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { resolve } = require('path')
-const { mainModule } = require('process')
+const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+
+/** @type {import('webpack').Configuration} */
 
 module.exports = {
+    mode: 'production',
     entry: './src/pages/index.js',
-    mode: 'development',
     output: {
-        path: Path.resolve(__dirname, 'dist'),
-        filename: 'js/index.js'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'js/main.js'
     },
-    resolve: {
-        extensions:['.js']
-    },
-    devServer: {
-        hot: true,
-        open: true
+    resolve:{
+        extensions: ['.js']
     },
     module:{
         rules: [
             {
-                test:/\.js?/,
+                test: /\.m?js$/,
                 exclude: /node_modules/,
                 use:{
                     loader: 'babel-loader'
                 }
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            }            
+            }
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            title: 'TermOK',
+        new HTMLWebpackPlugin({
             inject: true,
             template: './public/index.html',
-            filename: './dist/index.html'            
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
+            filename: './index.html'
         })
     ]
 }
