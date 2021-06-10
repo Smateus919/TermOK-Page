@@ -4,7 +4,8 @@
   "description": "Pagina web para la marca de fajas TermOK",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "build": "webpack",
+    "start": "webpack-dev-server --open --mode development --watch-poll"
   },
   "keywords": [
     "Fajas",
