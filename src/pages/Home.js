@@ -51,8 +51,8 @@ const Home = () => {
                 <img src="" alt="">
             </section>              
         </section>
-        <img class="right-arrow" src="../src/assets/icons/flecha-derecha2.png" alt=""> 
-        <img class="left-arrow" src="../src/assets/icons/flecha-izquierda2.png" alt="">                         
+        <img class="right-arrow" id="right-arrow" src="../src/assets/icons/flecha-derecha2.png" alt=""> 
+        <img class="left-arrow" id="left-arrow" src="../src/assets/icons/flecha-izquierda2.png" alt="">                         
     </section>  
     <script type="text/javascript" src="../src/utils/slider.js"></script>
     <section class="articles">
