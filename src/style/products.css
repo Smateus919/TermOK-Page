@@ -1,0 +1,75 @@
+.Products{
+    background-color: #f8f2f2;
+    display: flex;
+}
+.Products-container{
+    width: 65%;
+    height: auto;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.Products-container h2{
+    font-size: 2.8rem;
+    text-decoration: underline;
+    margin: 20px;
+}
+.Products-container img{
+    width: 600px;
+}
+.bar-rightProd{
+    width: 35%;
+    padding: 20px;
+    padding-top: 130px;
+    margin-right: 60px;
+
+    text-align: center;
+}
+.bar-rightProd p{
+    font-size: 1.5rem;
+    margin:20px 5px;
+}
+.bar-rightProd h3{
+    font-size: 1.8rem;
+    margin: 5px;
+}
+.bar-rightProd h4{
+    font-size: 2.5rem;
+    margin: 5px;
+    margin-bottom: 30px;
+}
+.frmComprar{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1.7rem;
+}
+.frmComprar label{
+    margin-bottom: 5px;
+}
+.frmComprar select{
+    margin-bottom: 15px;
+}
+.btnComprar{
+    padding: 3px 7px;
+    margin-top: 20px;
+    margin: 5px;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #f6be0c;
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: -2px 2px 2px #1d1d1d;
+    transition: .7s; 
+}
+.btnComprar:hover{
+    font-size: 4rem;
+    transition: .7s;
+    background-color: #fa2360;
+}

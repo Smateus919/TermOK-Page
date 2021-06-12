@@ -9,7 +9,7 @@ const Home = () => {
                     <div class="info-slider__text">
                         <h2>Compra tu faja termoredutora por un precio especial</h2>
                         <p>Llevala por solo $39,900 + envio GRATIS</p>
-                        <a class="btnConocermas" href="#">Conoce más</a>
+                        <a class="btnConocermas" href="#/productos">Conoce más</a>
                     </div>
                 </div>
                 <img src="" alt="">
@@ -67,7 +67,7 @@ const Home = () => {
                 <div class="articles-info">
                     <h3>Batidos para bajar de peso</h3>
                     <p>Las investigaciones sugieren que la manera más segura de perder peso y no volver a aumentarlo es siguiendo una dieta saludable con menos calorías de...</p>
-                    <a class="verMas" href="#">ver más</a>
+                    <a class="verMas" href="#/articulos">ver más</a>
                 </div>
             </article>
             <article>
@@ -79,7 +79,7 @@ const Home = () => {
                 <div class="articles-info">
                     <h3>Licuados verdes para quemar grasa</h3>
                     <p>Los jugos verdes se han puesto de moda gracias a que en una sola bebida se combinan las propiedades de verduras y frutas que...</p>
-                    <a class="verMas" href="#">ver más</a>
+                    <a class="verMas" href="#/articulos">ver más</a>
                 </div>
             </article>
             <article>
@@ -92,7 +92,7 @@ const Home = () => {
                     <h3>Batidos rojos para perder peso naturalmente</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur cumque, repellat 
                         ...</p>
-                    <a class="verMas" href="#">ver más</a>
+                    <a class="verMas" href="#/articulos">ver más</a>
                 </div>
             </article>
         </section>
@@ -101,37 +101,8 @@ const Home = () => {
         <img src="../src/assets/images/hombre-mujer-faja.png" alt="modelos mujer y hombre con faja">
         <div class="info-optionPay">
             <h2>Compra faja termoredutora por solo <br>$39,000!!</h2>
-            <a href="#">Comprar</a>
+            <a href="#/productos">Comprar</a>
         </div>
-    </section>
-    <section class="CharacteristicsBrand">
-        <article class="CharacteristicsBrand-items">
-            <div class="CharacteristicsBrand-items__img">
-                <img src="../src/assets/icons/seguridad2.png" alt="icono de seguridad">
-            </div>
-            <div class="CharacteristicsBrand-items__info">
-                <h3>Seguridad</h3>
-                <p>Garantizamos la seguridad de tus comprar ofreciendote diferentes medios de pago y contando con el respaldo de <a href="">ePayco</a></p>
-            </div>
-        </article>
-        <article class="CharacteristicsBrand-items">
-            <div class="CharacteristicsBrand-items__img">
-                <img src="../src/assets/icons/calidad.png" alt="">
-            </div>
-            <div class="CharacteristicsBrand-items__info">
-                <h3>Calidad</h3>
-                <p>Entregamos productos de primera calidad, con material de gran grosor y acabados reforzados</p>
-            </div>
-        </article>
-        <article class="CharacteristicsBrand-items">
-            <div class="CharacteristicsBrand-items__img">
-                <img src="../src/assets/icons/Saludable.png" alt="">
-            </div>
-            <div class="CharacteristicsBrand-items__info">
-                <h3>Bienestar</h3>
-                <p>Nuestra prioridad es poder dar bienestar para ti, ofreciendo la mejor información para el cuidado de tu cuerpo y mente</p>
-            </div>
-        </article>
     </section>    
     `
     return view

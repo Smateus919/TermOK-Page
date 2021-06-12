@@ -25,6 +25,15 @@ header{
     margin: .5px 0;
     cursor: pointer;
 }
+.logo-principal a{
+    width: 100%;
+    height: 150px;
+    display: block;
+    margin:0;
+    padding:0;
+    z-index: 5;
+    text-decoration: none;
+}
 /* --------------DISEÑO SLIDER ---------------------------*/
 .main-container{
     width: 100%;
