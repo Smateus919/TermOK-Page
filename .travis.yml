@@ -15,9 +15,6 @@ git:
 script: 
   - yarn build
 
-branches: 
-  only: SPA-Vanilla
-
 deploy: 
   provider: pages
   skip-cleanup: true
