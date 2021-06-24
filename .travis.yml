@@ -1,0 +1,30 @@
+language: node_js
+os: windows
+
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+  
+node_js:
+  -'12'
+
+git: 
+  depth: 3
+
+script: 
+  - yarn build
+
+branches: 
+  only: SPA-Vanilla
+
+deploy: 
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist/
+  target-branch: SPA-Vanilla
+  commit_message: "Deploy del proyecto"
+  on:
+    branch: SPA-Vanilla

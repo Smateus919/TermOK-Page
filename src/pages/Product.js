@@ -1,15 +1,14 @@
 const Products = ()=>{
     const view = `
         <section class="Products">
-            <div class="Products-container">
-                <h2>Faja termoreductora con gran grosor y costuras reforzadas</h2>
+            <div class="Products-container">                
                 <img src="../src/assets/images/viewProduct.png" alt="Faja termoreductora">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum est ducimus pariatur inventore dolore ab impedit repudiandae molestias, autem dolorum maiores temporibus voluptas blanditiis enim id beatae necessitatibus aperiam voluptatem!</p>
             </div>
             <div class="bar-rightProd">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum est ducimus pariatur inventore dolore ab impedit repudiandae molestias, autem dolorum maiores temporibus voluptas blanditiis enim id beatae necessitatibus aperiam voluptatem!</p>
-                <div>
-                    <h3>Valor: </h3><h4>$39,900</h4>
-                </div>
+                <h2>Faja termoreductora con gran grosor y costuras reforzadas</h2>
+                <h3>Valor: </h3><h4>$39,900</h4>
+                <p>*Envio gratis a nivel nacional</p>
                 <form class="frmComprar" action="">
                     <label for="Talla">Talla</label>
                         <Select name="Talla">

@@ -149,5 +149,9 @@
 }
 /* -------------------- FOOTER ----------------------------*/
 footer{
-    font-size: 1.2rem;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+footer p{
+    padding-top: 5px;
 }
