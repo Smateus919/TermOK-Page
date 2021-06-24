@@ -1,17 +1,16 @@
 language: node_js
-os: windows
 cache:
   directories:
-    - node_modules
-    - ~/.npm  
+    - ~/.npm
 node_js:
-  - '12'
-git: 
+  - "12"
+git:
   depth: 3
-script: 
+script:
   - yarn build
 deploy: 
   provider: pages
+  edge: true
   skip_cleanup: true
   keep_history: true
   github_token: $GITHUB_TOKEN
