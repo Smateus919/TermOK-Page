@@ -18,7 +18,7 @@
     font-size: 2rem;
 }
 .slider-items:nth-child(1){
-    background-image: url('../assets/images/slider1-laptop.png');
+    background-image: url('../../assets/images/slider1-laptop.png');
 }
 #imgFajaPrincipal{
     width: 43.94%;
@@ -32,7 +32,7 @@
     background-color: #fa2360;
 }
 .slider-items:nth-child(2){
-    background-image: url('../assets/images/slider2-laptop.png');
+    background-image: url('../../assets/images/slider2-laptop.png');
 }
 #imgPaySlider{
     width: 250px;
@@ -44,7 +44,7 @@
     width: 650px;
 }
 .slider-items:nth-child(3){
-    background-image: url('../assets/images/slider3-laptop.png');
+    background-image: url('../../assets/images/slider3-laptop.png');
 }
 .slider-items:nth-child(3) img{
     width: 350px;
@@ -54,7 +54,7 @@
     font-size: 3.7rem;
 }
 .slider-items:nth-child(4){
-    background-image: url('../assets/images/slider4-laptop.png');
+    background-image: url('../../assets/images/slider4-laptop.png');
 }
 .slider-items:nth-child(4) img{
     width: 450px;

@@ -1,0 +1,133 @@
+.Products{
+    background-color: #f8f2f2;
+}
+.Products-container{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.Product-optionBuy{
+    width: 100%;
+    margin-left: 20px;
+}
+.Carrusel-Image{
+    width: 95%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.Products-container img{
+    width: 100%;
+}
+.bar-rightProd__buy{
+    width: 95%;
+    padding: 0 0 50px;
+
+    text-align: start;
+    background-color: #efebed;
+    box-shadow: 0px 4px 4px #e1cc9c;
+}
+.bar-rightProd h2{
+    width: 100%;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    
+    background-color: #fff;
+}
+.bar-rightProd p{
+    font-size: 1.7rem;
+    margin:0 20px 25px;
+    padding-bottom: 20px;
+    border-bottom: solid #edb5c9 1px;
+}
+.bar-rightProd__valores{
+    width: 100%;
+    height: auto;
+}
+.bar-rightProd h3{
+    font-size: 2rem;
+    margin: 20px;
+}
+.bar-rightProd h4{
+    font-size: 4rem;
+    margin: 20px;
+    margin-bottom: 25px;
+
+    color: #ff1d6e;
+}
+.frmComprar{
+    margin-bottom: 15px;
+    padding-top: 20px;
+    border-top: #edb5c9 solid 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+}
+.frmComprar label{
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.frmComprar select{
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+.btnComprar{
+    padding: 5px 10px;
+    margin-top: 40px;
+    margin-left: 120px;
+    border: solid 1px #fff;
+    border-radius: 15px;
+    text-decoration: none;
+    background-color: #f6be0c;
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: -2px 2px 2px #1d1d1d;
+    transition: .7s; 
+}
+.btnComprar:hover{
+    font-size: 4rem;
+    transition: .7s;
+    background-color: #fa2360;
+}
+.infoProduct{
+    width: 100%;
+    padding: 30px;
+    font-size: 1.7rem;
+    line-height: 31px;
+}
+.infoProduct h3{
+    margin: 15px;
+    font-size: 2.8rem;
+    text-align: center;
+}
+.bar-rightProd__video{
+    width: 100px;
+    height: 200px;
+
+    background-color: #fa2360;
+}
+.infoProduct ul{
+    list-style: none;
+}
+.infoProduct-Description p{
+    margin-bottom: 40px;
+}
+.infoProduct-videoPromo{
+    width: 100%;
+    height: 200px;
+
+    background-color: #fa2360;
+}

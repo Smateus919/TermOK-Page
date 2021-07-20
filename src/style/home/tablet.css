@@ -13,7 +13,7 @@
     margin-bottom: 40px;
 }
 .slider-items:nth-child(1){
-    background-image: url('../assets/images/slider1-tablet.png');
+    background-image: url('../../assets/images/slider1-tablet.png');
     background-position: center;
     justify-content: flex-end 
 }
@@ -28,7 +28,7 @@
     margin-bottom: 30px;
 }
 .slider-items:nth-child(2){
-    background-image: url('../assets/images/slider2-tablet.png');        
+    background-image: url('../../assets/images/slider2-tablet.png');        
 }
 #imgPaySlider{
     width: 200px;
@@ -39,7 +39,7 @@
     width: 400px;
 }
 .slider-items:nth-child(3){
-    background-image: url('../assets/images/slider3-tablet.png');
+    background-image: url('../../assets/images/slider3-tablet.png');
     background-position: center;
 }
 .slider-items:nth-child(3) img{
@@ -47,7 +47,7 @@
     margin-bottom: 4.5vh;
 }
 .slider-items:nth-child(4){
-    background-image: url('../assets/images/slider4-tablet.png');
+    background-image: url('../../assets/images/slider4-tablet.png');
     background-position: center;       
 }
 .slider-items:nth-child(4) img{
@@ -94,7 +94,7 @@
 }
 /* -------------------- OPTION PAY ----------------------------*/
 .OptionPay{
-    background-image: url('../assets/images/payZone-tablet.png');
+    background-image: url('../../assets/images/payZone-tablet.png');
     background-size: cover;
 }
 .OptionPay img{
