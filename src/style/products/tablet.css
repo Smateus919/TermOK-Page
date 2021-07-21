@@ -1,0 +1,34 @@
+.Products-container img{
+    width: 90vw;
+}
+
+.Product-optionBuy {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bar-rightProd h2{
+    font-size: 3.3rem;
+}
+.bar-rightProd__buy{
+    width: 90vw;
+}
+.bar-rightProd p{
+    font-size: 2rem;
+    border-bottom: solid #edb5bc 1.8px;
+}
+.bar-rightProd h3 {
+    font-size: 2.5rem;
+}
+.bar-rightProd h4 {
+    font-size: 5rem;
+}
+.frmComprar {
+    font-size: 2.5rem;
+
+    border-top: solid #edb5bc 1.8px;
+}
+.btnComprar {
+    margin-left: 40%;
+}

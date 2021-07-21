@@ -7,6 +7,8 @@ import Footer from '../template/Footer'
 import nextSlider from '../utils/nextSlider'
 import prevSlider from '../utils/prevSlider'
 import getHash from '../utils/getHash'
+import showMenu from '../utils/showMenu'
+import closedMenu from '../utils/closedMenu'
 
 const routes = {
     '/': Home,
@@ -27,9 +29,16 @@ const router = async () => {
     content.innerHTML= await render()
     footer.innerHTML = await Footer()
 
+    // SLIDER
     let btnNextSlider = document.getElementById('right-arrow')
     btnNextSlider.addEventListener('click', nextSlider) 
     let btnPrevSlider = document.getElementById('left-arrow')
     btnPrevSlider.addEventListener('click', prevSlider)
+
+    // BURGERMENU
+    let openMenu = document.getElementById('burgerMenu-open-icon')
+    openMenu.addEventListener('click', showMenu)
+    let closeMenu = document.getElementById('closeMenu')
+    closeMenu.addEventListener('click', closedMenu)
 }
 export default router
