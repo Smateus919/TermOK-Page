@@ -1,0 +1,40 @@
+.redes-login{
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: end;
+}
+.redes-login-items{
+    width: 35%;
+    display: flex;
+}
+.icon-facebook{
+    width: 50px;
+    height: 50px;
+    background-image: url('../../../../assets/icons8-facebook-rodeado-de-círculo.svg');
+}
+.icon-instagram{
+    width: 50px;
+    height: 50px;
+    background-image: url('../../../../assets/icons8-instagram.svg');
+}
+.icon-whatsapp{
+    width: 50px;
+    height: 50px;
+    background-image: url('../../../../assets/icons8-whatsapp.svg');
+}
+.vl{
+    border-left: 6px solid green;
+    height: 500px;
+}
+.main-icon{
+    display: flex;
+    justify-content: center;
+}
+.main-menu{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
