@@ -1,4 +1,50 @@
-<video muted autoplay loop>
-    <source src="../../../../assets/videos/production ID_5151347.mp4" type="video/mp4">
-</video>
-<div class="capa"></div>
+<div class="main-container">
+    <header>
+            <div class="row">
+                <div class="col-xs-12 redes-login">
+                    <div class="redes-login-items">
+                        <a href=""><div class="icon-facebook"></div></a>
+                        <a href="https://instagram.com/termokcol"><div class="icon-instagram"></div></a>
+                        <a href=""><div class="icon-whatsapp"></div></a>
+                        <hr>
+                        <button mat-raised-button class="btn-primary">Iniciar Sesion</button>
+                        <button mat-button>Registrarse</button>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-12 main-icon">
+                    <img src="../../../../assets/img/Logo-sin-fondo.png" alt="logo termok" width="95">
+                </div>
+                <div class="col-xs-6 col-md-12 main-menu">
+                    <nav>
+                        <input type="checkbox" id="check">
+                        <label for="check" class="bar-btn">
+                            <div class="icon-menu"></div>
+                        </label>
+                        <ul class="nav-menu">
+                            <li><a mat-button routerLink="/home" routerLinkActive="active">Inicio</a></li>
+                            <li><a href="#">Comprar</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Contactanos</a></li>
+                            <li><a href="#">Cuenta</a></li>
+                        </ul>
+                    </nav>               
+                </div>
+            </div>
+    </header>
+    <video autoplay="autoplay" loop="loop" muted id="video">
+        <source  src="../../../../assets/videos/principal-muted.mp4" >
+    </video>
+    <div class="capa"></div>
+    <div class="leyenda">
+        <div class="row center-xs">
+            <div class="col-xs-12 col-md-6">
+                <img src="../../../../assets/img/faja.png" alt="imagen faja">
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h2>Aprovecha y lleva contigo tu faja termica</h2>
+                <h4>Por solo $29,900 y con envio GRATIS</h4>
+                <button mat-stroked-button class="btn-primary">Comprar</button>
+            </div>
+        </div>  
+    </div>
+</div>

@@ -4,6 +4,8 @@ import { ProductPresentationComponent } from './components/product-presentation/
 import { HomeComponent } from './components/home/home.component';
 import { HomeRoutingModule } from './homer-routing.module';
 import { ProductCharacteristicsComponent } from './components/product-characteristics/product-characteristics.component';
+import { MaterialModule } from '../material/material.module';
+import { FeaturedVideosComponent } from './components/featured-videos/featured-videos.component';
 
 
 
@@ -11,11 +13,13 @@ import { ProductCharacteristicsComponent } from './components/product-characteri
   declarations: [
     ProductPresentationComponent,
     HomeComponent,
-    ProductCharacteristicsComponent
+    ProductCharacteristicsComponent,
+    FeaturedVideosComponent
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    MaterialModule
   ]
 })
 export class HomeModule { }
