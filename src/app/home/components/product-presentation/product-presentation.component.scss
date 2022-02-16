@@ -146,6 +146,7 @@ video{
 .leyenda .row h2{
     margin-top: 50px;
     font-size: 2rem;
+    text-shadow: 0px 4px 11px 8px rgba(15,15,15,0.26);
 }
 .leyenda .row h4{
     font-size: 1.5rem;
@@ -167,7 +168,7 @@ video{
         display: none;
     }
     .nav-menu{
-        width: 560px;
+        width: 600px;
         height: 50px;
         background: rgba($color: #0f0f0f, $alpha: 0.3);;
         border-radius: 20px;
@@ -178,7 +179,7 @@ video{
     .nav-menu li{
         display: inline-block;
         line-height: 50px;
-        margin: 0 20px;
+        margin: 0 5px;
         transition: none;
     }
     .nav-menu li:nth-child(1){

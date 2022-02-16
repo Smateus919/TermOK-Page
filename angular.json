@@ -32,10 +32,13 @@
             ],
             "styles": [
               "src/styles.scss",
+              "./node_modules/glider-js/glider.min.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "./node_modules/flexboxgrid/dist/flexboxgrid.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/glider-js/glider.min.js"
+            ]
           },
           "configurations": {
             "production": {
