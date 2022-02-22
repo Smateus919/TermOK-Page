@@ -3,9 +3,19 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body {
-    background-color: #f8ecf0
+    background-color: #f5f4f4
 }
 body .btn-primary{
     background-color: #f6be0c;
     color: #0f0f0f;
+}
+body .btn-facebook{
+    background-color: #4267B2;
+}
+body .btn-instagram{
+    background: rgb(88,81,216);
+    background: linear-gradient(171deg, rgba(88,81,216,1) 0%, rgba(225,48,108,1) 46%, rgba(247,119,55,1) 100%);
+}
+body .btn-whatsapp{
+    background-color: #075e54;
 }

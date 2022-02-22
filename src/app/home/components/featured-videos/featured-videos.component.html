@@ -11,7 +11,7 @@
                     <img [src]="imagePrev.urlImage" width="100%" alt="">
                     <mat-card-header>
                         <mat-card-title>{{ imagePrev.title }}</mat-card-title>
-                        <mat-card-subtitle>fecha de publicacion</mat-card-subtitle>
+                        <mat-card-subtitle><mat-icon class="material-icons-outlined">schedule</mat-icon>01/01/2022</mat-card-subtitle>
                     </mat-card-header>
                 </mat-card>
             </div>
@@ -29,6 +29,7 @@
             <div (click)="transformIndi1()" class="carousel-indicadores__item" id="ind1" #ind1></div>
             <div (click)="transformIndi2()" class="carousel-indicadores__item" id="ind2" #ind2></div>
             <div (click)="transformIndi3()" class="carousel-indicadores__item" id="ind3" #ind3></div>
+            <div (click)="transformIndi4()" class="carousel-indicadores__item" id="ind4" #ind4></div>
         </div>
     </div>
 </div>

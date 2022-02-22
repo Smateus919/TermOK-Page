@@ -8,7 +8,7 @@ import { Video } from "../../../core/models/video.model";
 })
 export class FeaturedVideosComponent implements OnInit, OnChanges {
   
-  mov = 100/3
+  mov = 25
   indi = 0
   imagenesPrev: Video[] = [
     {
@@ -62,6 +62,7 @@ export class FeaturedVideosComponent implements OnInit, OnChanges {
   @ViewChild('ind1') eInd1: ElementRef
   @ViewChild('ind2') eInd2: ElementRef
   @ViewChild('ind3') eInd3: ElementRef
+  @ViewChild('ind4') eInd4: ElementRef
 
   constructor(private renderer: Renderer2) { 
 
@@ -82,6 +83,7 @@ export class FeaturedVideosComponent implements OnInit, OnChanges {
     this.renderer.setStyle(this.eInd1.nativeElement, 'background-color', '#fa2360')
     this.renderer.setStyle(this.eInd2.nativeElement, 'background-color', '#eff3f7')
     this.renderer.setStyle(this.eInd3.nativeElement, 'background-color', '#eff3f7')
+    this.renderer.setStyle(this.eInd4.nativeElement, 'background-color', '#eff3f7')
     this.indi = 0
   }
   transformIndi2(){
@@ -89,6 +91,7 @@ export class FeaturedVideosComponent implements OnInit, OnChanges {
     this.renderer.setStyle(this.eInd1.nativeElement, 'background-color', '#eff3f7')
     this.renderer.setStyle(this.eInd2.nativeElement, 'background-color', '#fa2360')
     this.renderer.setStyle(this.eInd3.nativeElement, 'background-color', '#eff3f7')
+    this.renderer.setStyle(this.eInd4.nativeElement, 'background-color', '#eff3f7')
     this.indi = 1
   }
   transformIndi3(){
@@ -96,7 +99,16 @@ export class FeaturedVideosComponent implements OnInit, OnChanges {
     this.renderer.setStyle(this.eInd1.nativeElement, 'background-color', '#eff3f7')
     this.renderer.setStyle(this.eInd2.nativeElement, 'background-color', '#eff3f7')
     this.renderer.setStyle(this.eInd3.nativeElement, 'background-color', '#fa2360')
+    this.renderer.setStyle(this.eInd4.nativeElement, 'background-color', '#eff3f7')
     this.indi = 2
+  }
+  transformIndi4(){
+    this.renderer.setStyle(this.carouselContenedor.nativeElement, 'transform', `translateX(-${this.mov*3}%)`)
+    this.renderer.setStyle(this.eInd1.nativeElement, 'background-color', '#eff3f7')
+    this.renderer.setStyle(this.eInd2.nativeElement, 'background-color', '#eff3f7')
+    this.renderer.setStyle(this.eInd3.nativeElement, 'background-color', '#eff3f7')
+    this.renderer.setStyle(this.eInd4.nativeElement, 'background-color', '#fa2360')
+    this.indi = 3
   }
   next(){
     switch (this.indi) {
@@ -107,6 +119,9 @@ export class FeaturedVideosComponent implements OnInit, OnChanges {
         this.transformIndi3()
         break
       case 2:
+        this.transformIndi4()
+        break
+      case 3:
         this.transformIndi1()
         break
       default:
@@ -117,13 +132,16 @@ export class FeaturedVideosComponent implements OnInit, OnChanges {
   prev(){
     switch (this.indi) {
       case 0:
-        this.transformIndi3()
+        this.transformIndi4()
         break;
       case 1:
         this.transformIndi1()
         break
       case 2:
         this.transformIndi2()
+        break
+      case 3:
+        this.transformIndi3()
         break
       default:
         alert('Valor invalido en carrusel')
