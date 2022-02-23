@@ -15,7 +15,8 @@ import { FooterComponent } from './components/footer/footer.component'
     MaterialModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

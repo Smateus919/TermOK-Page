@@ -7,7 +7,7 @@ import { ProductCharacteristicsComponent } from './components/product-characteri
 import { MaterialModule } from '../material/material.module';
 import { FeaturedVideosComponent } from './components/featured-videos/featured-videos.component';
 import { SocialNetworksComponent } from './components/social-networks/social-networks.component';
-
+import { SharedModule } from "../shared/shared.module";
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { SocialNetworksComponent } from './components/social-networks/social-net
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

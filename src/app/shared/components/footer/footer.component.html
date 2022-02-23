@@ -1,1 +1,74 @@
-<p>footer works!</p>
+<footer>
+    <div class="container">
+        <div class="row center-xs">
+            <div class="col-xs-12 col-sm-4">
+                <!-- Formulario de contacto -->
+                <h4>Contactanos</h4>
+                <form action="">
+                    <mat-card>
+                        <mat-card-content>
+                            <div class="row center-xs">
+                                <div class="col-xs-12">
+                                    <mat-form-field>
+                                        <input placeholder="Nombre" matInput type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-xs-12">
+                                    <mat-form-field>
+                                        <input placeholder="Correo electronico" matInput type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-xs-12">
+                                    <mat-form-field>
+                                        <textarea formControlName="description" matInput  placeholder="Mensaje"cols="30" rows="3"></textarea>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <!-- Menu de navegacion -->
+                <h4>Menu de navegación</h4>
+                <div class="nav-footer">
+                    <ul>
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="">Comprar</a></li>
+                        <li><a href="">Videos</a></li>
+                        <li><a href="">Contactenos</a></li>
+                        <li><a href="">Cuenta</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <!-- Redes sociales -->
+                <h4>Redes sociales</h4>
+
+                <mat-list>
+                    <mat-list-item>                        
+                        <div mat-line class="sn-footer">
+                          <mat-icon class="icon-facebook"></mat-icon>
+                          <a href="">Termok</a>
+                        </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <div mat-line class="sn-footer">
+                          <mat-icon class="icon-instagram"></mat-icon>
+                          <a href="">@Termokcol</a>
+                        </div>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <div mat-line class="sn-footer">
+                          <mat-icon class="icon-whatsapp"></mat-icon>
+                          <a href="">+57 321 9050037</a>
+                        </div>
+                    </mat-list-item>
+                  </mat-list>
+            </div>
+        </div>
+    </div>
+    <div id="firm">
+        Desarrollado por Sebastian Mateus | Termok 2022 | © Derechos reservados
+    </div>
+</footer>

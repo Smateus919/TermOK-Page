@@ -1,36 +1,32 @@
 <header>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 redes-login">
-                <div class="redes-login-items">
-                    <a href=""><div class="icon-facebook"></div></a>
-                    <a href="https://instagram.com/termokcol"><div class="icon-instagram"></div></a>
-                    <a href=""><div class="icon-whatsapp"></div></a>
-                    <hr>
-                    <button mat-raised-button class="btn-primary">Iniciar Sesion</button>
-                    <button mat-button>Registrarse</button>
-                </div>
+    <div class="row">
+        <div class="col-xs-12 redes-login">
+            <div class="redes-login-items">
+                <a href=""><div class="icon-facebook"></div></a>
+                <a href="https://instagram.com/termokcol"><div class="icon-instagram"></div></a>
+                <a href=""><div class="icon-whatsapp"></div></a>
+                <hr>
+                <button mat-raised-button class="btn-primary">Iniciar Sesion</button>
+                <button mat-button>Registrarse</button>
             </div>
-            <div class="col-xs-12 main-icon">
-                <img src="../../../../assets/img/Logo-sin-fondo.png" alt="logo termok" width="108">
-            </div>
-            <div class="col-xs-12 main-menu">
-                <mat-toolbar>
-                    <mat-toolbar-row>
-                        <div class="container">
-                            <div class="row between-xs middle-xs header-row">
-                                <nav>
-                                    <a mat-button routerLink="/home" routerLinkActive="active">Inicio</a>
-                                    <a mat-button routerLink="/products" routerLinkActive="active">Comprar</a>
-                                    <a mat-button routerLink="/contact" routerLinkActive="active">Videos</a>
-                                    <a mat-button routerLink="/contact" routerLinkActive="active">Contactenos</a>
-                                    <a mat-button routerLink="/contact" routerLinkActive="active">Cuenta</a>
-                                </nav>    
-                            </div>
-                        </div>
-                    </mat-toolbar-row>        
-                </mat-toolbar>                
-            </div>
+        </div>
+        <div class="col-xs-6 col-md-12 main-icon">
+            <img src="../../../../assets/img/Logo-sin-fondo.png" alt="logo termok" width="95">
+        </div>
+        <div class="col-xs-6 col-md-12 main-menu">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="bar-btn">
+                    <div class="icon-menu"></div>
+                </label>
+                <ul class="nav-menu">
+                    <li><a mat-button routerLink="/home" routerLinkActive="active">Inicio</a></li>
+                    <li><a mat-button routerLink="/compra" routerLinkActive="active">Comprar</a></li>
+                    <li><a mat-button routerLink="/videos" routerLinkActive="active">Videos</a></li>
+                    <li><a mat-button routerLink="/contactanos" routerLinkActive="active">Contactanos</a></li>
+                    <li><a mat-button routerLink="/cuenta" routerLinkActive="active">Cuenta</a></li>
+                </ul>
+            </nav>               
         </div>
     </div>
 </header>

@@ -1,21 +1,21 @@
 .social-networks{
     padding: 20px;
     background-image: url('../../../../assets/img/slider4-movil.png');
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 150px;
+    background-position-y: center;
 }
-.container{
+.container, .row{
     max-width: 100vw;
 }
 .container img{
     width: 300px;
 }
 .info-networks{
+    width: 100%;
     height: 220px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,18 +24,26 @@
     color: #fff;
 }
 .info-networks button{
-    margin: 0 10px;
+    margin: 5px 10px;
 }
 
 @media screen and (min-width: 540px) {
     .social-networks{
         padding: 35px 0; 
         background-image: url('../../../../assets/img/fondo-redes.png');        
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position-y: bottom;
     }
     .container img{
-        width: 400px;
+        width: 350px;
+    }
+    .info-networks{
+        padding: 0;
+        margin-top: 40px;
+    }
+    .info-networks h2{
+        width: 90%;
+        font-size: 1.8rem;
     }
 }

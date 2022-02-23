@@ -1,0 +1,75 @@
+<div class="shopping">
+    <div class="container">
+        <mat-stepper #stepper>
+            <mat-step  errorMessage="Name is required.">
+                <ng-template matStepLabel>Confirmar pedido</ng-template>          
+                <div class="container confimar-pedido">
+                    <div class="row center-xs">
+                        <div class="col-xs-12">
+                            <!-- Carrusel de imagenes de la faja -->
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img id="big-image" [src]='imgGrande' alt="modelo con la faja">
+                                </div>
+                                <div class="col-xs-2" *ngFor="let image of imagenesFaja">
+                                  <img [src]="image.urlImage" alt="modelo con la faja" (click)="asignarImgGrande(image.urlImage)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <mat-card>
+                                <mat-card-header>
+                                    <mat-card-title>Cinturilla Faja Termoreductora</mat-card-title>
+                                    <mat-card-subtitle>Confirma las cararteristicas de tu faja</mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <form>
+                                        <div class="selectColor">
+                                            <!-- Color negro-rosa -->
+                                            <input type="checkbox" id="check">
+                                            <label for="check" class="bar-btn">
+                                                <div class="color-circle"></div>
+                                            </label>
+                                            <!-- Color negro-amarillo -->
+                                            <input type="checkbox" id="check">
+                                            <label for="check" class="bar-btn">
+                                                <div class="color-circle"></div>
+                                            </label>
+                                        </div>
+                                    </form>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                        <div class="col-xs-12"></div>
+                    </div>
+                  
+                  
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+            </mat-step>
+            <mat-step errorMessage="Address is required.">
+              <form >
+                <ng-template matStepLabel>Datos de envio</ng-template>
+                <mat-form-field appearance="fill">
+                  <mat-label>Address</mat-label>
+                  <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
+                         required>
+                </mat-form-field>
+                <div>
+                  <p>Go to a different step to see the error state</p>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Listo</ng-template>
+              <p>You are now done.</p>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+              </div>
+            </mat-step>
+          </mat-stepper>
+    </div>
+</div>
