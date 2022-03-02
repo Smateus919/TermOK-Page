@@ -1,0 +1,25 @@
+.carruselImg{
+    width: 100%;
+    margin: 0;
+}
+.confimar-pedido{
+    margin-top: 10px;
+}
+.confimar-pedido img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.carruselImg .col-xs-2, .carruselImg .col-xs-12{
+    padding: 0;
+}
+.carruselImg .col-xs-12{
+    padding: 3px;
+}
+.container .col-xs-12{
+    overflow: hidden;
+}
+#big-image{
+    width: 100%;
+    height: 330px;
+}

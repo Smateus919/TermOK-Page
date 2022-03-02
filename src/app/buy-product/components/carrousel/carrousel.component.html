@@ -1,0 +1,11 @@
+<!-- Carrusel de imagenes de la faja -->
+<div class="confimar-pedido">
+    <div class="row carruselImg">
+        <div class="col-xs-12">
+            <img id="big-image" [src]='imgGrande' alt="modelo con la faja">
+        </div>
+        <div class="col-xs-2" *ngFor="let image of imagenesFaja">
+          <img [src]="image.urlImage" alt="modelo con la faja" (click)="asignarImgGrande(image.urlImage)">
+        </div>
+    </div>
+</div>

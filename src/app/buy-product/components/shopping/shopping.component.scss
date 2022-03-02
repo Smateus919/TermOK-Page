@@ -1,28 +1,112 @@
-.confimar-pedido{
-    margin-top: 10px;
-}
-.container img{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-.container .col-xs-2, .container .col-xs-12{
-    padding: 0;
-}
-.container .col-xs-12{
-    overflow: hidden;
-}
-#big-image{
-    width: 100%;
-    height: 350px;
-}
-.selectColor{
-    display: flex;
-    justify-content: center;
-}
-.selectColor .color-circle{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: aqua;
+.shopping{
+    max-width: 100vw;
+
+    .container, .container .row{
+        max-width: 100vw;
+    }
+    .talla-color{
+
+        mat-card{
+            margin-top: 10px;
+            height: 95%;
+            padding: 0;
+            background-color: #fafafa;
+        }
+        mat-card mat-card-header{
+            margin-bottom: 10px;
+            background-color: #f3c21f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        mat-card mat-card-title{
+            padding-top: 10px;
+        }
+        mat-card-content{
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        mat-card mat-card-content p{
+            color: #3a3a3a;
+            font-size: .9rem;
+            padding: 0 20px;
+        }
+        .select-options{
+            display: flex;
+            justify-content: center;
+        }
+        .select-options #checkColorRs, .select-options #checkColorAm{
+            display: none;
+        }
+        .select-options #checkColorAm:checked ~ .select-options .rosa{
+            opacity: .8;
+        }
+        #checkColorAm:checked ~ .select-options .amar{
+            opacity: 1;
+        }
+        .select-options .color-circle{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin: 0 10px 15px 10px;
+            cursor: pointer;
+            opacity: .4;
+        }
+        .select-options .rosa{
+            background-color: #fa2360;
+        }
+        .select-options .amar{
+            background-color: #f6be0c;
+        }
+        .talla-circle{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #080808;
+            color: #fff;
+            line-height: 45px;
+            opacity: .4;
+        }
+        button{
+            margin-top: 20px;
+            margin-left: 80%;
+        }
+    }
+    .shipping{
+        mat-card{
+            margin-top: 20px;
+            padding: 0;
+            padding: 20px;
+            width: 85vw;
+        }
+        mat-card mat-card-header{
+            padding: 10px 0;
+            margin-bottom: 25px;
+            background-color: #f55980;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        mat-card img{
+            width: 200px;
+            margin: 10px;
+        }
+        mat-card mat-card-subtitle{
+            margin-bottom: 0;
+        }
+        mat-card-content .form-shipping{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        hr{
+            width: 80%;
+        }
+    }
 }

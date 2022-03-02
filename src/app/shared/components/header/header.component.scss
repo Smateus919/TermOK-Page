@@ -49,10 +49,10 @@ nav{
     font-weight: 600;
     text-decoration: none;
 }
-nav>a.active{
+.nav-menu li>a.active{
     color: #fa2360;
 }
-#check{
+.main-menu #check{
     display: none;
 }
 #check:checked ~ .nav-menu{
@@ -78,6 +78,9 @@ nav>a.active{
 
     display: flex;
     justify-content: center;
+    img{
+        cursor: pointer;
+    }
 }
 .main-menu{
 

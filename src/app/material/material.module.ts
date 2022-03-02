@@ -10,6 +10,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -25,7 +26,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatInputModule,
     MatFormFieldModule,
     MatStepperModule,
-    MatRadioModule
+    MatRadioModule,
+    MatExpansionModule
   ],
   exports: [
     MatButtonModule,
@@ -36,7 +38,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatInputModule,
     MatFormFieldModule,
     MatStepperModule,
-    MatRadioModule
+    MatRadioModule,
+    MatExpansionModule
   ]
 })
 export class MaterialModule { }
