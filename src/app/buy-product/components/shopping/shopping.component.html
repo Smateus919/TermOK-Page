@@ -1,7 +1,9 @@
 <div class="shopping">
     <div class="container">
-        <mat-stepper #stepper>
-            <mat-step  errorMessage="Name is required." >
+        <mat-stepper linear #stepper>
+            <!-- Confirmar compra -->
+            <mat-step  [stepControl]="formConfirmOrder" errorMessage="Name is required." >
+              <form [formGroup]="formConfirmOrder">
                 <ng-template matStepLabel>Confirmar pedido</ng-template>          
                 <div class="container talla-color">
                   <div class="row center-xs">
@@ -20,12 +22,12 @@
                                 <h4>1. Selecciona de que color deseas el interior de la faja</h4>
                                 <div class="select-options">
                                   <!-- Color negro-rosa -->
-                                  <input type="checkbox" id="checkColorRs">
+                                  <input formControlName="color" type="checkbox" class="check" id="checkColorRs">
                                   <label for="checkColorRs" class="bar-btn">
                                       <div class="color-circle rosa"  #circleColorRs (click)="optionRosa()"></div>
                                   </label>
                                   <!-- Color negro-amarillo -->
-                                  <input type="checkbox" id="checkColorAm">
+                                  <input formControlName="color" type="checkbox" class="check" id="checkColorAm">
                                   <label for="checkColorAm" class="bar-btn">
                                       <div class="color-circle amar" #circleColorAm (click)="optionAmarillo()"></div>
                                   </label>
@@ -40,17 +42,17 @@
                                 </div>
                                 <div class="select-options">
                                   <!-- Color negro-rosa -->
-                                  <input type="checkbox" id="checkColorRs">
+                                  <input formControlName="size" type="checkbox" class="check" id="sizeS-M">
                                   <label for="checkColorRs" class="bar-btn">
                                       <div class="talla-circle" #circleTallaSM (click)="optionSM()">S-M</div>
                                   </label>
                                   <!-- Color negro-amarillo -->
-                                  <input type="checkbox" id="checkColorAm">
+                                  <input formControlName="size" type="checkbox" class="check" id="sizeS-M">
                                   <label for="checkColorAm"  class="bar-btn">
                                       <div class="talla-circle" #circleTallaLXL (click)="optionLXL()">L-XL</div>
                                   </label>
                                   <!-- Color negro-amarillo -->
-                                  <input type="checkbox" id="checkColorAm">
+                                  <input type="checkbox" formControlName="size" class="check" id="sizeS-M">
                                   <label for="checkColorAm" class="bar-btn">
                                       <div class="talla-circle" #circleTalla2XL3XL (click)="option2XL3XL()" tyle="font-size: .65rem;">2XL-3XL</div>
                                   </label>
@@ -58,7 +60,13 @@
                               </div>
                               <div>
                                 <h4>3. Selecciona la cantidad</h4>
-
+                                  <div  class="inputCant">
+                                    <P id="cant">{{ orders.cant }}</P>
+                                    <div class="inputCant-controls">
+                                      <mat-icon class="material-icons-outline" (click)="addCant()">add_circle_outline</mat-icon>
+                                      <button [disabled]="btnLessCtrl" (click)="lessCant()"><mat-icon class="material-icons-outline" >remove_circle_outline</mat-icon></button>                                      
+                                    </div>
+                                  </div>
                               </div>
                             </mat-card-content>
                         </mat-card>
@@ -67,12 +75,12 @@
                         <app-detail-product></app-detail-product>
                       </div>
                     </div>
-                <button [disabled]="btnCtrl1" mat-raised-button matStepperNext>Next</button>
+                <button id="btnNext" [disabled]="btnCtrl1" mat-raised-button matStepperNext>Next</button>
               </div>
+              </form>
             </mat-step>
-
             <!--Datos de envío -->
-            <mat-step errorMessage="Address is required.">
+            <mat-step [stepControl]="formShipping" errorMessage="Faltan datos de envío">
               <form [formGroup]="formShipping" class="shipping">
                 <ng-template matStepLabel>Datos de envío</ng-template>
                 <div class="row center-xs">
@@ -102,11 +110,11 @@
                           </mat-form-field>
                           <mat-form-field appearance="fill">
                             <mat-label>Correo electronico</mat-label>
-                            <input matInput placeholder="email">
+                            <input matInput formControlName="email">
                           </mat-form-field>
-                          <div>
-                            <input type="checkbox" id="checkTC">
-                            <label for="checkTC">Acepto que he leido y estoy de acuerdo con los <a routerLink="/">Terminos y condiciones</a> de la marca TermOk</label>
+                          <div class="termCond">
+                            <mat-checkbox formControlName="TermCond">Acepto que he leido y estoy de acuerdo <br> con los <a routerLink="/">Terminos y condiciones</a> de la marca.</mat-checkbox>
+                            <p *ngIf="formShipping.get('TermCond')?.hasError('required') && formShipping.get('TermCond')?.touched || tmValidForNext">*Para continuar debes aceptar términos y condiciones</p>
                           </div>
                         </div>
                       </mat-card-content>
@@ -120,24 +128,26 @@
                       </mat-card-header>
                       <img src="../../../../assets/img/imgFaja1.png" alt="">
                       <mat-card-content>
-                        <div><b>Cinturilla Faja Termoreductora</b><hr></div>
-                        <div><b>Color:</b> {{ buy.color || 'No haz seleccionado el color' }} <hr></div>
-                        <div><b>Talla:</b> {{ buy.talla || 'No haz seleccionado la talla' }} <hr></div>
-                        
+                        <div style="font-size: 1.2rem;"><b>Cinturilla Faja Termoreductora</b><hr></div>
+                        <div><b>Color:</b> {{ orders.color || 'No haz seleccionado el color' }} <hr></div>
+                        <div><b>Talla:</b> {{ formConfirmOrder.controls['size'].value || 'No haz seleccionado la talla' }} <hr></div>
+                        <div><b>Cantidad:</b> {{ formConfirmOrder.controls['cant'].value }} <hr></div>
+                        <div><b>Metodo de pago:</b> Contraentrega<hr></div>
+                        <div id="total">Total a pagar: {{ 29900 * orders.cant | currency}}<hr></div>
                       </mat-card-content>
                     </mat-card>
                   </div>
                 </div>                
                 <div>
-                  <p>Go to a different step to see the error state</p>
                   <button mat-button matStepperPrevious>Back</button>
-                  <button mat-button matStepperNext type="submit">Siguiente</button>
+                  <button mat-button matStepperNext type="submit" (click)="tmValid()">Siguiente</button>
                 </div>
               </form>
             </mat-step>
+            <!-- Terminar pedido -->
             <mat-step>
-              <ng-template matStepLabel>Listo</ng-template>
-              <p>You are now done.</p>
+              <ng-template matStepLabel>Terminar</ng-template>
+              <app-result-order></app-result-order>
               <div>
                 <button mat-button matStepperPrevious>Back</button>
                 <button mat-button (click)="stepper.reset()">Reset</button>

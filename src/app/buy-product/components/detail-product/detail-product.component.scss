@@ -1,3 +1,26 @@
-mat-panel-title{
-    font-weight: 500;
+mat-accordion{
+    mat-panel-title{
+        font-weight: 500;
+    }
+    .twrap h3{
+        font-weight: 500;
+    }
+    table{
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+        -webkit-box-shadow: 0px 0px 15px 3px #1f1e1e42; 
+        box-shadow: 0px 0px 15px 3px #1f1e1e42;
+        td{
+            padding: 10px;
+            border-bottom: 1.3px solid #1f1e1e42;
+            border-left: 1.3px solid #1f1e1e42;
+            text-align: start;
+            background-color: #f8f8f8;
+        }
+        th{
+            color: #fa2360;
+            font-weight: 620;
+        }
+    }
 }

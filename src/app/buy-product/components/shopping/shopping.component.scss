@@ -38,7 +38,7 @@
             display: flex;
             justify-content: center;
         }
-        .select-options #checkColorRs, .select-options #checkColorAm{
+        .select-options .check{
             display: none;
         }
         .select-options #checkColorAm:checked ~ .select-options .rosa{
@@ -46,6 +46,10 @@
         }
         #checkColorAm:checked ~ .select-options .amar{
             opacity: 1;
+        }
+        mat-radio-group{
+            background: none;
+            
         }
         .select-options .color-circle{
             width: 25px;
@@ -72,16 +76,42 @@
             line-height: 45px;
             opacity: .4;
         }
-        button{
+        #btnNext{
             margin-top: 20px;
             margin-left: 80%;
         }
+        #cant{
+            margin: 0;
+            padding: 0 7px;
+            font-size: 1.4rem;
+            line-height: 40px;
+        }
+        .inputCant{
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            .inputCant-controls{
+                display: flex;
+                flex-direction: column;
+                margin-left: 5px;
+                button{
+                    margin: 0;
+                    padding: 0;
+                    background: none;
+                    border: none;
+                }
+                mat-icon{
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+            }
+        }
+        
     }
     .shipping{
         mat-card{
             margin-top: 20px;
-            padding: 0;
-            padding: 20px;
+            padding: 20px 0;
             width: 85vw;
         }
         mat-card mat-card-header{
@@ -105,8 +135,36 @@
             align-items: center;
             justify-content: center;
         }
+        mat-form-field{
+            width: 250px;
+        }
+        .termCond{
+            max-width: 80vw;
+            text-align: start;
+            transition: all .5 linear;            
+            p{
+                margin-top: 10px;
+                transition: all .5 linear;
+                color: #e20c0c;
+                font-weight: 600;
+            }            
+        }
+        ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+            opacity: 0.03 !important;
+            background-color: #f55980!important;
+          }
+        
+        ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+            background-color: #f55980;
+          }
+        #total{
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgb(196, 4, 4);
+        }
         hr{
             width: 80%;
         }
+        
     }
 }

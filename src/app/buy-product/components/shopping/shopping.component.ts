@@ -1,12 +1,20 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 
-import { Buy } from "../../../core/models/buy.model";
+import { Orders } from "../../../core/models/orders.model";
+import { myValidators } from "../../../utils/validators";
 
 @Component({
   selector: 'app-shopping',
   templateUrl: './shopping.component.html',
-  styleUrls: ['./shopping.component.scss']
+  styleUrls: ['./shopping.component.scss'],
+  providers: [
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: {showError: true},
+    },
+  ],
 })
 export class ShoppingComponent implements OnInit {
 
@@ -17,14 +25,18 @@ export class ShoppingComponent implements OnInit {
   @ViewChild('circleTalla2XL3XL') circleTalla2XL3XL:ElementRef
 
   formShipping: FormGroup
+  formConfirmOrder: FormGroup
 
   ctrlTalla = false
   ctrlColor = false
   btnCtrl1 = true
+  btnLessCtrl = true
+  tmValidForNext = false
 
-  buy: Buy = {
+  orders: Orders = {
     color: '',
-    talla: ''
+    talla: '',
+    cant: 1
   }
 
   constructor(
@@ -39,6 +51,12 @@ export class ShoppingComponent implements OnInit {
       location: ['', Validators.required],
       cell: ['', Validators.required],
       email: ['', Validators.email],
+      TermCond: [false, [Validators.requiredTrue]] 
+    })
+    this.formConfirmOrder = this.formBuilder.group({
+      color: ['', Validators.required],
+      size: ['', Validators.required],
+      cant: 1
     })
   }
 
@@ -47,19 +65,22 @@ export class ShoppingComponent implements OnInit {
     this.renderer2.setStyle(this.circleColorRs.nativeElement, 'border', '1.5px solid #22060e')
     this.renderer2.setStyle(this.circleColorAm.nativeElement, 'border', 'none')
     this.renderer2.setStyle(this.circleColorAm.nativeElement, 'opacity', '.4')
-    this.buy.color = 'rosa'
+    this.formConfirmOrder.controls['color'].setValue('Rosa')
+    this.orders.color = this.formConfirmOrder.controls['color'].value
+    console.log(this.formConfirmOrder.controls['color'].value);    
     this.ctrlColor = true
     this.validateForm()
+    
   }
   optionAmarillo(){
     this.renderer2.setStyle(this.circleColorAm.nativeElement, 'opacity', '1')
     this.renderer2.setStyle(this.circleColorAm.nativeElement, 'border', '1.5px solid #22060e')
     this.renderer2.setStyle(this.circleColorRs.nativeElement, 'opacity', '.4')
     this.renderer2.setStyle(this.circleColorRs.nativeElement, 'border', 'none')
-    this.buy.color = 'amarillo'
+    this.formConfirmOrder.controls['color'].setValue('Amarillo')
+    this.orders.color = this.formConfirmOrder.controls['color'].value
     this.ctrlColor = true
     this.validateForm()
-
   }
   optionSM(){
     this.renderer2.setStyle(this.circleTallaSM.nativeElement, 'opacity', '1')
@@ -68,7 +89,7 @@ export class ShoppingComponent implements OnInit {
     this.renderer2.setStyle(this.circleTallaLXL.nativeElement, 'border', 'none')
     this.renderer2.setStyle(this.circleTalla2XL3XL.nativeElement, 'opacity', '.4')
     this.renderer2.setStyle(this.circleTalla2XL3XL.nativeElement, 'border', 'none')
-    this.buy.talla = 'S-M'
+    this.formConfirmOrder.controls['size'].setValue('S-M')
     this.ctrlTalla = true
     this.validateForm()
   }
@@ -79,7 +100,7 @@ export class ShoppingComponent implements OnInit {
     this.renderer2.setStyle(this.circleTallaLXL.nativeElement, 'border', '1.5px solid #22060e')
     this.renderer2.setStyle(this.circleTalla2XL3XL.nativeElement, 'opacity', '.4')
     this.renderer2.setStyle(this.circleTalla2XL3XL.nativeElement, 'border', 'none')
-    this.buy.talla = 'L-XL'
+    this.formConfirmOrder.controls['size'].setValue('L-XL')
     this.ctrlTalla = true
     this.validateForm()
   }
@@ -90,17 +111,32 @@ export class ShoppingComponent implements OnInit {
     this.renderer2.setStyle(this.circleTallaLXL.nativeElement, 'border', 'none')
     this.renderer2.setStyle(this.circleTalla2XL3XL.nativeElement, 'opacity', '1')
     this.renderer2.setStyle(this.circleTalla2XL3XL.nativeElement, 'border', '1.5px solid #22060e')
-    this.buy.talla = '2XL-3XL'
+    this.formConfirmOrder.controls['size'].setValue('2XL-3XL')
     this.ctrlTalla = true
     this.validateForm()
   }
   validateForm(){
     if (this.ctrlColor && this.ctrlTalla) {
       this.btnCtrl1 = false
+    }    
+  }
+  addCant(){
+    if (this.orders.cant < 50) {
+      this.orders.cant += 1 
+      this.btnLessCtrl = false  
     }
-    console.log('Corriendo OK!!', this.btnCtrl1);
-    
+  }
+  lessCant(){
+    this.orders.cant -= 1
+    if (this.orders.cant <= 1) {
+      this.btnLessCtrl = true  
+      this.orders.cant = 1
+    }
   }
 
+  tmValid(){
+    console.log('resultado:', this.formShipping.get('TermCond')?.valid);    
+    this.formShipping.get('TermCond')?.valid ? this.tmValidForNext = false : this.tmValidForNext = true
+  }
 
 }

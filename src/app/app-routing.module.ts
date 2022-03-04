@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LayoutComponent } from "./layout/layout.component";
 import { HomeModule } from "./home/home.module";
+import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
         loadChildren: ()=> import('./buy-product/buy-product.module').then(m => m.BuyProductModule)
       }
     ]
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 

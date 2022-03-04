@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
@@ -27,7 +28,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatFormFieldModule,
     MatStepperModule,
     MatRadioModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCheckboxModule
   ],
   exports: [
     MatButtonModule,
@@ -39,7 +41,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatFormFieldModule,
     MatStepperModule,
     MatRadioModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule { }
